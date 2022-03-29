@@ -1,6 +1,7 @@
 from timeit import default_timer as timer
 
 
+# time complexity: O(n * n + n)
 def improvedFindBiggestRectangle(matrix: list[list[int]]) -> int:
     # Checks if matrix is empty
     if len(matrix) == 0:
