@@ -1,3 +1,6 @@
+from timeit import default_timer as timer
+
+
 def improvedFindBiggestRectangle(matrix: list[list[int]]) -> int:
     # Checks if matrix is empty
     if len(matrix) == 0:
@@ -32,3 +35,18 @@ def improvedFindBiggestRectangle(matrix: list[list[int]]) -> int:
             positionStack.append(min(lastWidth, i))
 
     return maxArea
+
+
+matrixes = [[[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]],  # 9.10000380827114e-06s
+            [[1, 1, 1, 1, 1], [1, 1, 1, 1, 1], [1, 1, 1, 1, 1],
+                [1, 1, 1, 1, 1], [1, 1, 1, 1, 1]],  # 1.550000160932541e-05s
+            [],  # 1.2000018614344299e-06s
+            [[1, 0, 0, 1, 1, 1], [1, 0, 1, 1, 0, 1], [0, 1, 1, 1, 1, 1], [0, 0, 1, 1, 1, 1]]]  # 2.630000381032005e-05s
+
+
+for matrix in matrixes:
+    start = timer()
+    improvedFindBiggestRectangle(matrix)
+    stop = timer()
+    Tn = stop - start
+    print(f"{Tn}s")
