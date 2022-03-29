@@ -24,3 +24,12 @@ def findBiggestRectangle(matrix: list[list[int]]) -> int:
             maxArea = max(currentArea, maxArea)
 
     return maxArea
+
+
+for n in range(1000, 10000, 1000):
+    start = timer()
+    f5(n)
+    stop = timer()
+    Tn = stop - start
+    Fn = math.log(n, 2)
+    print(n, '\t', format(Tn, '.8f'), '\t', int(Fn / Tn))
