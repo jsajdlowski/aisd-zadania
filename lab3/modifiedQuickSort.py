@@ -20,9 +20,10 @@ def bubbleSort(arr: list[int]):
 
 
 def modifiedQuickSort(arr: list[int], pivot: int, right: int, c: int = 1):
-    if right - pivot + 1 < c:
-        bubbleSort(arr)
     if pivot < right:
-        q = partition(arr, pivot, right)
-        modifiedQuickSort(arr, pivot, q, c)
-        modifiedQuickSort(arr, q + 1, right, c)
+        if right - pivot + 1 < c:
+            bubbleSort(arr[pivot: right])
+        else:
+            q = partition(arr, pivot, right)
+            modifiedQuickSort(arr, pivot, q, c)
+            modifiedQuickSort(arr, q + 1, right, c)
