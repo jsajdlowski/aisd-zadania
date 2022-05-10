@@ -1,7 +1,7 @@
 from hashTable import HashTable
 
 if __name__ == "__main__":
-    # 278805 % 6 = 1
+    # 278805 % 3 = 0
     # [W + OL]
     # rozmiary
     lengths = [1021]  # , 1024, 2039, 4093, 4096, 16381]
