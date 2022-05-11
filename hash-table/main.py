@@ -4,7 +4,7 @@ if __name__ == "__main__":
     # 278805 % 3 = 0
     # [W + OL]
     # rozmiary
-    lengths = [1021]  # , 1024, 2039, 4093, 4096, 16381]
+    lengths = [1021, 1024, 2039, 4093, 4096, 16381]
 
     file = open("./hash-table/nazwiskaASCII.txt").read().splitlines()
 
