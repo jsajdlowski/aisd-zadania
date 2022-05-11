@@ -1,8 +1,5 @@
 from typing import Any
 
-from matplotlib.pyplot import table
-
-
 def hashStringToIntA(string: str, tableSize: int,  i: int = 0, acc: int = 0) -> int:
     if len(string) == 1:
         return (ord(string) + acc + i) % tableSize
